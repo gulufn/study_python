@@ -1,0 +1,10 @@
+{
+    "title": "原神",
+    "cover_image": "img.png",
+    "sources": [
+        {
+            "quality": "1080p",
+            "path": "video_1080p.mkv"
+        }
+    ]
+}
