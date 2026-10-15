@@ -54,6 +54,7 @@ dir_tvshows=[Utils.generate_random_str(18) for _ in range(len(tv_shows))]
 data = {
     "title": "",
     "cover_image": "img.png",
+    "episodes": "",
     "sources": [
     {"quality": "1080p", "path": "video_1080p.mkv"}
     ]
@@ -72,6 +73,7 @@ for show in tv_shows:
         json_path=dir_path +'/data.json'
         with open(json_path, "w", encoding="utf-8") as f:
             data['title'] = s['name']
+            data['episodes'] = s['episodes']
             data["sources"][0]["path"] = "video_1080p"+'.'+s['form']   # 改嵌套
             json.dump(data, f, ensure_ascii=False, indent=4)
     n=n+1
